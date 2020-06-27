@@ -1,0 +1,52 @@
+{
+  "name": "movie-search",
+  "version": "0.0.1",
+  "description": "movie search app",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "webpack-dev-server --mode development --env.APP_ENV=dev --env.VERSION=stag --config config/webpack.base.config.js --open --hot --history-api-fallback",
+    "prebuild": "webpack --mode production --config config/webpack.prod.config.js --env.APP_ENV=production --env.VERSION=stag --progress",
+    "build": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djm204/dear-movie-diary.git"
+  },
+  "author": "David Mendez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djm204/dear-movie-diary/issues"
+  },
+  "homepage": "https://github.com/djm204/dear-movie-diary#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.10.1",
+    "@babel/plugin-proposal-throw-expressions": "^7.10.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "2.0.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.10.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
