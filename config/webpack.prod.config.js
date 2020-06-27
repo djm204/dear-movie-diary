@@ -23,6 +23,6 @@ const prodConfig = () => {
   ])
 }
 
-module.exports = (env) => {
-  return merge(baseConfig(env), prodConfig())
+module.exports = () => {
+  return merge(baseConfig(), prodConfig())
 }
