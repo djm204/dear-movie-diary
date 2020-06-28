@@ -4,7 +4,7 @@
   "description": "movie search app",
   "main": "js/app.js",
   "scripts": {
-    "test": "npm test",
+    "test": "jest --setupFiles dotenv/config",
     "start": "webpack-dev-server --mode development --env.APP_ENV=dev --env.VERSION=stag --config config/webpack.base.config.js --open --hot --history-api-fallback",
     "prebuild": "webpack --mode production --config config/webpack.prod.config.js --env.APP_ENV=production --env.VERSION=stag --progress",
     "build": "node server"

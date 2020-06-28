@@ -2,9 +2,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const dotenv = require('dotenv')
+require('dotenv').config()
 
-dotenv.config()
 module.exports = () => {
   const { APP_ENV, OMDB_API_KEY } = process.env
 
