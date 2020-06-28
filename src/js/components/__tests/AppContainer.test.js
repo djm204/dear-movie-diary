@@ -1,5 +1,5 @@
 import React from 'react'
-import App from '../appContainer'
+import App from '../AppContainer'
 import 'whatwg-fetch'
 
 import { screen, render, waitForDomChange } from '@testing-library/react'

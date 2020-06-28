@@ -12,7 +12,6 @@ const SearchBox = (props) => {
           type="text"
           onChange={onChangeHandler}
           value={searchQuery}
-          data-testid="SearchBoxTestInput"
         />
         <button type="submit" disabled={submitting}>
           Submit
