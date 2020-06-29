@@ -4,16 +4,19 @@ import MovieDetails from './MovieDetails'
 const Confirmation = (props) => {
   const { selectedMovies } = props
   return (
-    <React.Fragment>
+    <div className="Confirmation">
       <Link to="/">
-        <button>Go Back</button>
+        <button className="Button secondary">Go Back</button>
       </Link>
       <div className="SelectMovieDetails">
         {selectedMovies.map((selectedMovie) => (
           <MovieDetails {...selectedMovie} />
         ))}
       </div>
-    </React.Fragment>
+      <div className="Confirmation_ConfirmButton">
+        <button className="Button primary">Confirm</button>
+      </div>
+    </div>
   )
 }
 
