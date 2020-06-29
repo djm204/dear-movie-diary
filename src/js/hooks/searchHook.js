@@ -5,24 +5,30 @@ const useSearchForm = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [searchResults, setSearchResults] = useState({})
-  const [errors, setErrors] = useState([])
+  const [selectedResults, setSelectedResults] = useState([])
 
   const handleSubmit = async (event) => {
     if (event) event.preventDefault()
     setSubmitting(true)
 
-    if (errors.length === 0) {
-      const result = await api.search(process.env.OMDB_API_KEY, searchQuery)
+    const result = await api.search(process.env.OMDB_API_KEY, searchQuery)
+    setSearchResults(result)
 
-      if (!result.Response) {
-        setErrors(result.Error)
-      } else {
-        setSearchResults(result)
-      }
+    setSubmitting(false)
+  }
 
-      setSubmitting(false)
+  const handleThumbnailClick = (event) => {
+    const targetId = event.currentTarget.dataset.imdbid
+    if (selectedResults && selectedResults.includes(targetId)) {
+      const result = selectedResults.filter((selectedId) => {
+        return selectedId !== targetId
+      })
+
+      setSelectedResults(result)
     } else {
-      setSubmitting(false)
+      const newResults = Array.from(selectedResults)
+      newResults.push(targetId)
+      setSelectedResults(newResults)
     }
   }
 
@@ -34,9 +40,10 @@ const useSearchForm = () => {
   return {
     handleSubmit,
     handleInputChange,
+    handleThumbnailClick,
     searchQuery,
     searchResults,
-    errors,
+    selectedResults,
     submitting,
   }
 }
