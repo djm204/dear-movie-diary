@@ -1,0 +1,25 @@
+.SearchResults_Data {
+  display: grid;
+  grid-template-columns: 100%;
+  .MovieThumbnail {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #8b8b8b;
+    padding: 20px;
+    .MovieThumbnail_AddToFavorites {
+      position: absolute;
+      bottom: 40px;
+      .MovieThumbnail_AddToFavorites_Message {
+        padding: 10px;
+        color: brown;
+        background: lightyellow;
+        border-radius: 5px;
+        &.--added {
+          color: darkgreen;
+          background: lightgreen;
+        }
+      }
+    }
+  }
+}

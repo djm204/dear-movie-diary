@@ -53,6 +53,7 @@
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "@babel/runtime": "^7.10.3",
+    "@testing-library/dom": "^7.9.0",
     "babel-jest": "^26.1.0",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",

@@ -5,9 +5,9 @@ import MovieThumbnail from '../MovieThumbnail'
 
 test('renders MovieThumbnail without crashing', () => {
   const props = {
-    movieTitle: 'someMovie',
-    posterImage: 'somePoster.png',
-    releaseDate: '2020',
+    Title: 'someMovie',
+    Poster: 'somePoster.png',
+    Year: '2020',
   }
 
   const result = render(<MovieThumbnail {...props} />)
@@ -15,13 +15,13 @@ test('renders MovieThumbnail without crashing', () => {
 
 test('ensure hover adds classname', async () => {
   const props = {
-    movieTitle: 'someMovie',
-    posterImage: 'somePoster.png',
-    releaseDate: '2020',
+    Title: 'someMovie',
+    Poster: 'somePoster.png',
+    Year: '2020',
   }
 
   render(<MovieThumbnail {...props} />)
-  const thumbnail = screen.getByTestId(props.movieTitle + props.releaseDate)
+  const thumbnail = screen.getByTestId(props.Title + props.Year)
   userEvent.hover(thumbnail)
   expect(thumbnail.classList.contains('--hovering')).toBe(true)
 

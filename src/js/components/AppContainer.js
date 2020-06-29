@@ -1,15 +1,19 @@
 import React from 'react'
+
 import SearchBox from './SearchBox'
 import useSearchForm from '../hooks/searchHook'
 
+import SearchResults from './SearchResults'
+
 const AppContainer = () => {
   const {
-    errors,
+    searchQuery,
     searchResults,
+    selectedResults,
     handleInputChange,
+    handleThumbnailClick,
     handleSubmit,
     submitting,
-    searchQuery,
   } = useSearchForm()
 
   return (
@@ -20,9 +24,11 @@ const AppContainer = () => {
         submitting={submitting}
         searchQuery={searchQuery}
       />
-      <div className="SearchResults">
-        <div className="SearchResults_Data">Results: {JSON.stringify(searchResults)}</div>
-      </div>
+      <SearchResults
+        selectedResults={selectedResults}
+        searchResults={searchResults}
+        handleThumbnailClick={handleThumbnailClick}
+      />
     </div>
   )
 }

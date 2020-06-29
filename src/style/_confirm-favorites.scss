@@ -1,0 +1,13 @@
+.SearchResults_ConfirmFavorites {
+  &.--fixed {
+    position: fixed;
+  }
+  position: initial;
+  z-index: 10;
+  background: white;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
