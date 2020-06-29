@@ -37,6 +37,7 @@ const useSearchForm = () => {
       const newSelection = searchResults.Search.filter((selection) => {
         return selection.imdbID === targetId
       })
+
       newResults.push(newSelection[0])
 
       setSelectedResults(newResults)
@@ -52,7 +53,9 @@ const useSearchForm = () => {
     if (event) event.preventDefault()
   }
 
-  const handleSubmitItems = (event) => {}
+  const handleSubmitItems = (event) => {
+    setConfirmed(true)
+  }
 
   return {
     handleSubmitSearch,

@@ -5,7 +5,7 @@ const SearchBox = (props) => {
   return (
     <React.Fragment>
       <form className="SearchForm" onSubmit={onSubmitHandler}>
-        <label htmlFor="search-box">Search for a movie..</label>
+        <label htmlFor="search-box">Search for a movie:</label>
         <input
           className="SearchForm__Input"
           id="search-box"

@@ -11,3 +11,23 @@
   justify-content: center;
   padding: 20px 0;
 }
+
+.MovieDetails {
+  display: flex;
+  justify-content: flex-start;
+  border-top: 1px solid #a1a1a1;
+  border-bottom: 1px solid #a1a1a1;
+  margin-bottom: 5px;
+  height: 125px;
+  .MoveDetails_Poster {
+    width: 75px;
+  }
+  img.MovieDetails_PosterImage {
+    height: 100%;
+  }
+
+  .MovieDetails_Description {
+    text-align: left;
+    padding-left: 20px;
+  }
+}

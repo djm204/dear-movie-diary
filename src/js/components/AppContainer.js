@@ -23,15 +23,15 @@ const AppContainer = () => {
 
   return (
     <div>
-      <SearchBox
-        onChangeHandler={handleInputChange}
-        onSubmitHandler={handleSubmitSearch}
-        submitting={submitting}
-        searchQuery={searchQuery}
-      />
       <Router>
         <Switch>
           <Route exact path="/">
+            <SearchBox
+              onChangeHandler={handleInputChange}
+              onSubmitHandler={handleSubmitSearch}
+              submitting={submitting}
+              searchQuery={searchQuery}
+            />
             <SearchResults
               selectedResults={selectedResults}
               searchResults={searchResults}

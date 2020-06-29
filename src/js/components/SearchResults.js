@@ -8,9 +8,9 @@ const SearchResults = (props) => {
   const [fixedConfirm, setFixedConfirm] = useState(false)
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50 && !fixedConfirm) setFixedConfirm(true)
+    if (window.scrollY > 45 && !fixedConfirm) setFixedConfirm(true)
 
-    if (window.scrollY < 50 && fixedConfirm) setFixedConfirm(false)
+    if (window.scrollY < 45 && fixedConfirm) setFixedConfirm(false)
   })
 
   return (
