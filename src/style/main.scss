@@ -3,8 +3,10 @@
 @import './search-box';
 @import './move-thumbnail';
 @import './confirm-favorites';
+@import './media-queries';
 
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
+  color: #222;
 }

@@ -13,7 +13,8 @@ exports[`search for citizen kane, assert results 1`] = `
         href="/confirmation"
       >
         <button
-          class="Button primary"
+          class="Button disabled"
+          disabled=""
           type="submit"
         >
           Confirm Favorites
@@ -29,6 +30,11 @@ exports[`search for citizen kane, assert results 1`] = `
       data-imdbid="tt0033467"
       data-testid="Citizen Kane1941"
     >
+      <img
+        alt="Citizen Kane"
+        class="MovieThumbnail_Image"
+        src="https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+      />
       <div
         class="MovieThumbnail_AddToFavorites"
       >
@@ -38,17 +44,17 @@ exports[`search for citizen kane, assert results 1`] = `
           Add to Favorites
         </div>
       </div>
-      <img
-        alt="Citizen Kane"
-        class="MovieThumbnail_Image"
-        src="https://m.media-amazon.com/images/M/MV5BYjBiOTYxZWItMzdiZi00NjlkLWIzZTYtYmFhZjhiMTljOTdkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
-      />
     </div>
     <div
       class="MovieThumbnail"
       data-imdbid="tt1356393"
       data-testid="Beyond Citizen Kane1993"
     >
+      <img
+        alt="Beyond Citizen Kane"
+        class="MovieThumbnail_Image"
+        src="https://m.media-amazon.com/images/M/MV5BMDEwMjAwZGEtZmMwNi00NmJhLWJlZjktNzg4MjdhNmVjY2U3XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_SX300.jpg"
+      />
       <div
         class="MovieThumbnail_AddToFavorites"
       >
@@ -58,11 +64,6 @@ exports[`search for citizen kane, assert results 1`] = `
           Add to Favorites
         </div>
       </div>
-      <img
-        alt="Beyond Citizen Kane"
-        class="MovieThumbnail_Image"
-        src="https://m.media-amazon.com/images/M/MV5BMDEwMjAwZGEtZmMwNi00NmJhLWJlZjktNzg4MjdhNmVjY2U3XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_SX300.jpg"
-      />
     </div>
     <div
       class="MovieThumbnail"
@@ -70,6 +71,13 @@ exports[`search for citizen kane, assert results 1`] = `
       data-testid="Reflections on 'Citizen Kane'1991"
     >
       <div
+        class="MovieThumbnail_Image --no-image"
+      >
+        Reflections on 'Citizen Kane'
+         - 
+        1991
+      </div>
+      <div
         class="MovieThumbnail_AddToFavorites"
       >
         <div
@@ -77,13 +85,6 @@ exports[`search for citizen kane, assert results 1`] = `
         >
           Add to Favorites
         </div>
-      </div>
-      <div
-        class="MovieThumbnail_Image --no-image"
-      >
-        Reflections on 'Citizen Kane'
-         - 
-        1991
       </div>
     </div>
     <div
@@ -92,6 +93,13 @@ exports[`search for citizen kane, assert results 1`] = `
       data-testid="The Complete Citizen Kane1991"
     >
       <div
+        class="MovieThumbnail_Image --no-image"
+      >
+        The Complete Citizen Kane
+         - 
+        1991
+      </div>
+      <div
         class="MovieThumbnail_AddToFavorites"
       >
         <div
@@ -99,13 +107,6 @@ exports[`search for citizen kane, assert results 1`] = `
         >
           Add to Favorites
         </div>
-      </div>
-      <div
-        class="MovieThumbnail_Image --no-image"
-      >
-        The Complete Citizen Kane
-         - 
-        1991
       </div>
     </div>
     <div
@@ -113,6 +114,11 @@ exports[`search for citizen kane, assert results 1`] = `
       data-imdbid="tt1387142"
       data-testid="Citizen versus Kane2009"
     >
+      <img
+        alt="Citizen versus Kane"
+        class="MovieThumbnail_Image"
+        src="https://m.media-amazon.com/images/M/MV5BMjg2ODM3MjI3NF5BMl5BanBnXkFtZTcwNDc0ODk1Mg@@._V1_SX300.jpg"
+      />
       <div
         class="MovieThumbnail_AddToFavorites"
       >
@@ -122,11 +128,6 @@ exports[`search for citizen kane, assert results 1`] = `
           Add to Favorites
         </div>
       </div>
-      <img
-        alt="Citizen versus Kane"
-        class="MovieThumbnail_Image"
-        src="https://m.media-amazon.com/images/M/MV5BMjg2ODM3MjI3NF5BMl5BanBnXkFtZTcwNDc0ODk1Mg@@._V1_SX300.jpg"
-      />
     </div>
     <div
       class="MovieThumbnail"
@@ -134,6 +135,13 @@ exports[`search for citizen kane, assert results 1`] = `
       data-testid="Citizen Kane and Zombies2011"
     >
       <div
+        class="MovieThumbnail_Image --no-image"
+      >
+        Citizen Kane and Zombies
+         - 
+        2011
+      </div>
+      <div
         class="MovieThumbnail_AddToFavorites"
       >
         <div
@@ -141,13 +149,6 @@ exports[`search for citizen kane, assert results 1`] = `
         >
           Add to Favorites
         </div>
-      </div>
-      <div
-        class="MovieThumbnail_Image --no-image"
-      >
-        Citizen Kane and Zombies
-         - 
-        2011
       </div>
     </div>
     <div
@@ -156,6 +157,13 @@ exports[`search for citizen kane, assert results 1`] = `
       data-testid="Restoring Citizen Kane2012"
     >
       <div
+        class="MovieThumbnail_Image --no-image"
+      >
+        Restoring Citizen Kane
+         - 
+        2012
+      </div>
+      <div
         class="MovieThumbnail_AddToFavorites"
       >
         <div
@@ -163,13 +171,6 @@ exports[`search for citizen kane, assert results 1`] = `
         >
           Add to Favorites
         </div>
-      </div>
-      <div
-        class="MovieThumbnail_Image --no-image"
-      >
-        Restoring Citizen Kane
-         - 
-        2012
       </div>
     </div>
   </div>

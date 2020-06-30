@@ -31,7 +31,6 @@ const MovieThumbnail = (props) => {
         data-testid={movieTitle + releaseDate}
         data-imdbid={imdbID}
       >
-        <AddToFavorites selected={selected} />
         {posterImage === 'N/A' ? (
           <div className="MovieThumbnail_Image --no-image">
             {movieTitle} - {releaseDate}
@@ -39,6 +38,7 @@ const MovieThumbnail = (props) => {
         ) : (
           <img alt={movieTitle} className="MovieThumbnail_Image" src={posterImage} />
         )}
+        <AddToFavorites selected={selected} />
       </div>
     </React.Fragment>
   )
