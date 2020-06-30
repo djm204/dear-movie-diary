@@ -10,10 +10,10 @@ test('renders MovieThumbnail without crashing', () => {
     Year: '2020',
   }
 
-  const result = render(<MovieThumbnail {...props} />)
+  render(<MovieThumbnail {...props} />)
 })
 
-test('ensure hover adds classname', async () => {
+test('ensure hover adds classname', () => {
   const props = {
     Title: 'someMovie',
     Poster: 'somePoster.png',
