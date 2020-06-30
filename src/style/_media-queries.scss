@@ -24,6 +24,16 @@
       .MovieThumbnail_AddToFavorites {
         bottom: 5px;
       }
+      .MovieThumbnail_AddToFavorites_Message {
+        &:hover {
+          background-color: initial;
+        }
+        &.--added {
+          &:hover {
+            background-color: initial;
+          }
+        }
+      }
 
       .MovieThumbnail_Image {
         width: 100%;
