@@ -8,9 +8,13 @@
     position: relative;
     border-bottom: 1px solid rgb(228, 227, 227);
     padding: 20px;
+    .MovieThumbnail_Image {
+      width: 70%;
+    }
     .MovieThumbnail_AddToFavorites {
       position: absolute;
       bottom: 40px;
+
       .MovieThumbnail_AddToFavorites_Message {
         padding: 10px;
         color: brown;

@@ -1,8 +1,10 @@
 @import './buttons';
+@import './header';
 @import './search-box';
 @import './move-thumbnail';
 @import './confirm-favorites';
 
 body {
   margin: 0;
+  font-family: 'Arial', sans-serif;
 }

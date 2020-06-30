@@ -12,6 +12,7 @@ const SearchResults = (props) => {
 
     if (window.scrollY < 45 && fixedConfirm) setFixedConfirm(false)
   })
+  const canConfirm = selectedResults.length > 0
 
   return (
     <div className="SearchResults" data-testid="search-results">
@@ -19,7 +20,11 @@ const SearchResults = (props) => {
         <div className={classnames('SearchResults_ConfirmFavorites', { '--fixed': fixedConfirm })}>
           <form onSubmit={handleConfirmButtonClick}>
             <Link to="/confirmation">
-              <button className="Button primary" type="submit">
+              <button
+                disabled={!canConfirm}
+                className={classnames('Button', { primary: canConfirm }, { disabled: !canConfirm })}
+                type="submit"
+              >
                 Confirm Favorites
               </button>
             </Link>
