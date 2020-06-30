@@ -18,12 +18,13 @@ const AppContainer = () => {
     handleSubmitSearch,
     handleConfirmButtonClick,
     handleSubmitItems,
+    handleGoBack,
     confirmed,
     submitting,
   } = useSearchForm()
 
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <Router>
         <Switch>
@@ -47,11 +48,12 @@ const AppContainer = () => {
               onClickHandler={handleSubmitItems}
               confirmed={confirmed}
               submitting={submitting}
+              handleGoBack={handleGoBack}
             />
           </Route>
         </Switch>
       </Router>
-    </div>
+    </React.Fragment>
   )
 }
 

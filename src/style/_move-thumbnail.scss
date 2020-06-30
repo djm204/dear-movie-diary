@@ -8,6 +8,8 @@
     position: relative;
     border-bottom: 1px solid rgb(228, 227, 227);
     padding: 20px;
+    text-transform: uppercase;
+
     .MovieThumbnail_Image {
       width: 70%;
     }
@@ -17,12 +19,18 @@
 
       .MovieThumbnail_AddToFavorites_Message {
         padding: 10px;
-        color: brown;
-        background: lightyellow;
+        color: #000;
+        font-weight: bold;
+        background: #e86826;
         border-radius: 5px;
+        &:hover {
+          background-color: #974116;
+        }
         &.--added {
-          color: darkgreen;
           background: lightgreen;
+          &:hover {
+            background-color: rgb(73, 119, 73);
+          }
         }
       }
     }

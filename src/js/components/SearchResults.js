@@ -12,7 +12,7 @@ const SearchResults = (props) => {
 
     if (window.scrollY < 45 && fixedConfirm) setFixedConfirm(false)
   })
-  const canConfirm = selectedResults.length > 0
+  const canConfirm = selectedResults?.length > 0
 
   return (
     <div className="SearchResults" data-testid="search-results">

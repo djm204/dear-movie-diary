@@ -59,8 +59,11 @@ const useSearchForm = () => {
     //I know this is gross but I wanted to simulate backend calls
     setTimeout(() => {
       setConfirmed(true)
-      setTimeout(() => resetStateAndGoHome(), 1000)
-    }, 3000)
+    }, 2000)
+  }
+
+  const handleGoBack = () => {
+    if (confirmed) resetStateAndGoHome()
   }
 
   const resetStateAndGoHome = () => {
@@ -69,7 +72,6 @@ const useSearchForm = () => {
     setSearchResults('')
     setSubmitting(false)
     setConfirmed(false)
-    window.location = '/'
   }
 
   return {
@@ -78,6 +80,7 @@ const useSearchForm = () => {
     handleInputChange,
     handleThumbnailClick,
     handleConfirmButtonClick,
+    handleGoBack,
     searchQuery,
     searchResults,
     selectedResults,

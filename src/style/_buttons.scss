@@ -5,6 +5,7 @@
   color: rgb(100, 99, 99);
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 
   &.primary {
     color: rgb(230, 227, 227);
@@ -15,5 +16,9 @@
     border: none;
     background: none;
     color: rgb(163, 161, 161);
+  }
+
+  &.disabled {
+    cursor: initial;
   }
 }
