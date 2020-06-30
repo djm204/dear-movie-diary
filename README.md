@@ -7,7 +7,7 @@
 1. clone repo
 1. `cd dear-movie-diary`
 1. `cp .env.example .env`
-1. edit .env and add your `OMDB_API_KEY`
+1. edit `.env` and add your `OMDB_API_KEY`
 1. `npm install`
 1. `npm start`
 
