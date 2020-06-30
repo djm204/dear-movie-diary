@@ -9,9 +9,16 @@ exports[`search for citizen kane, assert results 1`] = `
     class="SearchResults_ConfirmFavorites"
   >
     <form>
-      <button>
-        Confirm Favorites
-      </button>
+      <a
+        href="/confirmation"
+      >
+        <button
+          class="Button primary"
+          type="submit"
+        >
+          Confirm Favorites
+        </button>
+      </a>
     </form>
   </div>
   <div

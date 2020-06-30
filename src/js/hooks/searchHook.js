@@ -6,8 +6,9 @@ const useSearchForm = () => {
   const [submitting, setSubmitting] = useState(false)
   const [searchResults, setSearchResults] = useState({})
   const [selectedResults, setSelectedResults] = useState([])
+  const [confirmed, setConfirmed] = useState(false)
 
-  const handleSubmit = async (event) => {
+  const handleSubmitSearch = async (event) => {
     if (event) event.preventDefault()
     setSubmitting(true)
 
@@ -19,15 +20,26 @@ const useSearchForm = () => {
 
   const handleThumbnailClick = (event) => {
     const targetId = event.currentTarget.dataset.imdbid
-    if (selectedResults && selectedResults.includes(targetId)) {
-      const result = selectedResults.filter((selectedId) => {
-        return selectedId !== targetId
+    const alreadyExists =
+      selectedResults &&
+      selectedResults.filter((selection) => {
+        return selection.imdbID === targetId
+      }).length > 0
+
+    if (alreadyExists) {
+      const result = selectedResults.filter((selection) => {
+        return selection.imdbID !== targetId
       })
 
       setSelectedResults(result)
     } else {
       const newResults = Array.from(selectedResults)
-      newResults.push(targetId)
+      const newSelection = searchResults.Search.filter((selection) => {
+        return selection.imdbID === targetId
+      })
+
+      newResults.push(newSelection[0])
+
       setSelectedResults(newResults)
     }
   }
@@ -37,13 +49,39 @@ const useSearchForm = () => {
     setSearchQuery(event.target.value)
   }
 
+  const handleConfirmButtonClick = (event) => {
+    if (event) event.preventDefault()
+  }
+
+  const handleSubmitItems = () => {
+    setSubmitting(true)
+
+    //I know this is gross but I wanted to simulate backend calls
+    setTimeout(() => {
+      setConfirmed(true)
+      setTimeout(() => resetStateAndGoHome(), 1000)
+      window.location = '/'
+    }, 3000)
+  }
+
+  const resetStateAndGoHome = () => {
+    setSearchResults({})
+    setSelectedResults([])
+    setSearchResults('')
+    setSubmitting(false)
+    setConfirmed(false)
+  }
+
   return {
-    handleSubmit,
+    handleSubmitSearch,
+    handleSubmitItems,
     handleInputChange,
     handleThumbnailClick,
+    handleConfirmButtonClick,
     searchQuery,
     searchResults,
     selectedResults,
+    confirmed,
     submitting,
   }
 }

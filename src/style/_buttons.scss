@@ -1,0 +1,17 @@
+.Button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(100, 99, 99, 0.945);
+  color: rgb(100, 99, 99);
+
+  &.primary {
+    color: rgb(230, 227, 227);
+    background: #1e53fff1;
+  }
+
+  &.secondary {
+    border: none;
+    background: none;
+    color: rgb(163, 161, 161);
+  }
+}

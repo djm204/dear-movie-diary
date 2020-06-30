@@ -1,0 +1,32 @@
+.SearchForm {
+  padding: 15px;
+  border-bottom: 1px solid rgb(228, 227, 227);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  fieldset {
+    border: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  label {
+    position: absolute;
+    top: -10px;
+    font-size: 10px;
+  }
+  .SearchForm__Input {
+    line-height: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  input.SearchForm__Input:focus + label::before,
+  input.SearchForm__Input:active + label::before {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .Button {
+    float: right;
+  }
+}

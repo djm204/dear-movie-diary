@@ -1,23 +1,28 @@
 import React, { useState } from 'react'
 import MovieThumbnail from './MovieThumbnail'
 import classnames from 'classnames'
+import { Link } from 'react-router-dom'
 
 const SearchResults = (props) => {
-  const { selectedResults, searchResults, handleThumbnailClick } = props
+  const { selectedResults, searchResults, handleThumbnailClick, handleConfirmButtonClick } = props
   const [fixedConfirm, setFixedConfirm] = useState(false)
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50 && !fixedConfirm) setFixedConfirm(true)
+    if (window.scrollY > 45 && !fixedConfirm) setFixedConfirm(true)
 
-    if (window.scrollY < 50 && fixedConfirm) setFixedConfirm(false)
+    if (window.scrollY < 45 && fixedConfirm) setFixedConfirm(false)
   })
 
   return (
     <div className="SearchResults" data-testid="search-results">
       {searchResults.Response === 'True' && searchResults.Search.length > 0 ? (
         <div className={classnames('SearchResults_ConfirmFavorites', { '--fixed': fixedConfirm })}>
-          <form>
-            <button>Confirm Favorites</button>
+          <form onSubmit={handleConfirmButtonClick}>
+            <Link to="/confirmation">
+              <button className="Button primary" type="submit">
+                Confirm Favorites
+              </button>
+            </Link>
           </form>
         </div>
       ) : null}
@@ -31,19 +36,23 @@ const SearchResults = (props) => {
 const renderSearchResults = (results, handleThumbnailClick, selectedResults) => {
   switch (results.Response) {
     case 'True':
-      return results.Search.map((searchResult) => (
-        <MovieThumbnail
-          key={searchResult.imdbID}
-          {...searchResult}
-          onClickHandler={handleThumbnailClick}
-          selected={selectedResults.includes(searchResult.imdbID)}
-          imdbID={searchResult.imdbID}
-        />
-      ))
+      return results.Search.map((searchResult) => {
+        return (
+          <MovieThumbnail
+            key={searchResult.imdbID}
+            {...searchResult}
+            onClickHandler={handleThumbnailClick}
+            selected={
+              selectedResults.filter((result) => result.imdbID === searchResult.imdbID).length !== 0
+            }
+            imdbID={searchResult.imdbID}
+          />
+        )
+      })
     case 'False':
       return <p>{results.Error}</p>
     default:
-      return <p>No Search Yet</p>
+      return <p>Search For Movies!</p>
   }
 }
 

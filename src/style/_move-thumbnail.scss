@@ -1,11 +1,12 @@
 .SearchResults_Data {
   display: grid;
   grid-template-columns: 100%;
+  padding: 10px;
   .MovieThumbnail {
     display: flex;
     justify-content: center;
     position: relative;
-    border-bottom: 1px solid #8b8b8b;
+    border-bottom: 1px solid rgb(228, 227, 227);
     padding: 20px;
     .MovieThumbnail_AddToFavorites {
       position: absolute;

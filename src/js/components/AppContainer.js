@@ -1,9 +1,11 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import SearchBox from './SearchBox'
 import useSearchForm from '../hooks/searchHook'
 
 import SearchResults from './SearchResults'
+import Confirmation from './Confirmation'
 
 const AppContainer = () => {
   const {
@@ -12,23 +14,41 @@ const AppContainer = () => {
     selectedResults,
     handleInputChange,
     handleThumbnailClick,
-    handleSubmit,
+    handleSubmitSearch,
+    handleConfirmButtonClick,
+    handleSubmitItems,
+    confirmed,
     submitting,
   } = useSearchForm()
 
   return (
     <div>
-      <SearchBox
-        onChangeHandler={handleInputChange}
-        onSubmitHandler={handleSubmit}
-        submitting={submitting}
-        searchQuery={searchQuery}
-      />
-      <SearchResults
-        selectedResults={selectedResults}
-        searchResults={searchResults}
-        handleThumbnailClick={handleThumbnailClick}
-      />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <SearchBox
+              onChangeHandler={handleInputChange}
+              onSubmitHandler={handleSubmitSearch}
+              submitting={submitting}
+              searchQuery={searchQuery}
+            />
+            <SearchResults
+              selectedResults={selectedResults}
+              searchResults={searchResults}
+              handleThumbnailClick={handleThumbnailClick}
+              handleConfirmButtonClick={handleConfirmButtonClick}
+            />
+          </Route>
+          <Route path="/confirmation">
+            <Confirmation
+              selectedMovies={selectedResults}
+              onClickHandler={handleSubmitItems}
+              confirmed={confirmed}
+              submitting={submitting}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }
