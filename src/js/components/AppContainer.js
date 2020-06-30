@@ -6,6 +6,7 @@ import useSearchForm from '../hooks/searchHook'
 
 import SearchResults from './SearchResults'
 import Confirmation from './Confirmation'
+import Header from './Header'
 
 const AppContainer = () => {
   const {
@@ -23,6 +24,7 @@ const AppContainer = () => {
 
   return (
     <div>
+      <Header />
       <Router>
         <Switch>
           <Route exact path="/">

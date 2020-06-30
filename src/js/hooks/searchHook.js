@@ -60,7 +60,6 @@ const useSearchForm = () => {
     setTimeout(() => {
       setConfirmed(true)
       setTimeout(() => resetStateAndGoHome(), 1000)
-      window.location = '/'
     }, 3000)
   }
 
@@ -70,6 +69,7 @@ const useSearchForm = () => {
     setSearchResults('')
     setSubmitting(false)
     setConfirmed(false)
+    window.location = '/'
   }
 
   return {

@@ -12,6 +12,10 @@
   padding: 20px 0;
   border-bottom: 1px solid rgb(228, 227, 227);
 }
+.Button.disabled {
+  border-color: lightgray;
+  color: lightgray;
+}
 
 .MovieDetails {
   display: flex;
