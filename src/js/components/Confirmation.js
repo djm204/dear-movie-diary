@@ -13,6 +13,7 @@ const Confirmation = (props) => {
       </div>
 
       <div className="SelectMovieDetails">
+        <h2>{confirmed ? 'Selections Confirmed' : 'Confirm Selections'}</h2>
         {selectedMovies.map((selectedMovie) => (
           <MovieDetails key={selectedMovie.imdbID} {...selectedMovie} />
         ))}
