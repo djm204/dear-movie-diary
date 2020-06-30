@@ -16,5 +16,5 @@ test('renders SearchResults no search yet', () => {
   }
 
   const result = render(<SearchResults {...props} />)
-  expect(screen.getByText(/no search yet/i)).not.toBe(null)
+  expect(screen.getByText(/search for movies!/i)).not.toBe(null)
 })

@@ -5,15 +5,18 @@ const SearchBox = (props) => {
   return (
     <React.Fragment>
       <form className="SearchForm" onSubmit={onSubmitHandler}>
-        <label htmlFor="search-box">Search for a movie:</label>
-        <input
-          className="SearchForm__Input"
-          id="search-box"
-          type="text"
-          onChange={onChangeHandler}
-          value={searchQuery}
-        />
-        <button type="submit" disabled={submitting}>
+        <fieldset>
+          <label htmlFor="search-box">Search:</label>
+          <input
+            className="SearchForm__Input"
+            id="search-box"
+            type="text"
+            onChange={onChangeHandler}
+            value={searchQuery}
+          />
+        </fieldset>
+
+        <button className="Button" type="submit" disabled={submitting}>
           Submit
         </button>
       </form>

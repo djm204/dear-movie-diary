@@ -10,13 +10,14 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  border-bottom: 1px solid rgb(228, 227, 227);
 }
 
 .MovieDetails {
   display: flex;
   justify-content: flex-start;
-  border-top: 1px solid #a1a1a1;
-  border-bottom: 1px solid #a1a1a1;
+  border-top: 1px solid rgb(228, 227, 227);
+  border-bottom: 1px solid rgb(228, 227, 227);
   margin-bottom: 5px;
   height: 125px;
 
@@ -32,4 +33,29 @@
     text-align: left;
     padding-left: 20px;
   }
+}
+
+.Confirmation_ConfirmButton {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgb(228, 227, 227);
+  width: 100%;
+  i {
+    font-size: 16px;
+  }
+}
+
+.Confirmation_Header {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid rgb(228, 227, 227);
+}
+
+.Confirmation_Total {
+  margin-left: auto;
+  padding-right: 20px;
 }

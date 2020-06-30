@@ -42,8 +42,9 @@ const AppContainer = () => {
           <Route path="/confirmation">
             <Confirmation
               selectedMovies={selectedResults}
-              handleConfirmItems={handleSubmitItems}
+              onClickHandler={handleSubmitItems}
               confirmed={confirmed}
+              submitting={submitting}
             />
           </Route>
         </Switch>

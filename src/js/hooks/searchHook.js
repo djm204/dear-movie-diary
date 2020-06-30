@@ -53,8 +53,23 @@ const useSearchForm = () => {
     if (event) event.preventDefault()
   }
 
-  const handleSubmitItems = (event) => {
-    setConfirmed(true)
+  const handleSubmitItems = () => {
+    setSubmitting(true)
+
+    //I know this is gross but I wanted to simulate backend calls
+    setTimeout(() => {
+      setConfirmed(true)
+      setTimeout(() => resetStateAndGoHome(), 1000)
+      window.location = '/'
+    }, 3000)
+  }
+
+  const resetStateAndGoHome = () => {
+    setSearchResults({})
+    setSelectedResults([])
+    setSearchResults('')
+    setSubmitting(false)
+    setConfirmed(false)
   }
 
   return {

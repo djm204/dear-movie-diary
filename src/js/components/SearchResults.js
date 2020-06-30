@@ -19,7 +19,9 @@ const SearchResults = (props) => {
         <div className={classnames('SearchResults_ConfirmFavorites', { '--fixed': fixedConfirm })}>
           <form onSubmit={handleConfirmButtonClick}>
             <Link to="/confirmation">
-              <button type="submit">Confirm Favorites</button>
+              <button className="Button primary" type="submit">
+                Confirm Favorites
+              </button>
             </Link>
           </form>
         </div>
@@ -50,7 +52,7 @@ const renderSearchResults = (results, handleThumbnailClick, selectedResults) => 
     case 'False':
       return <p>{results.Error}</p>
     default:
-      return <p>No Search Yet</p>
+      return <p>Search For Movies!</p>
   }
 }
 

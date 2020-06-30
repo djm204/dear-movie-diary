@@ -13,6 +13,7 @@ exports[`search for citizen kane, assert results 1`] = `
         href="/confirmation"
       >
         <button
+          class="Button primary"
           type="submit"
         >
           Confirm Favorites
